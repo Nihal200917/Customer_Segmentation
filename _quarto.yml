@@ -3,6 +3,7 @@ project:
 
 website:
   title: "."
+  title: "Customer_Segmentation_Plots"
   navbar:
     left:
       - href: index.qmd
@@ -15,5 +16,9 @@ format:
     css: styles.css
     toc: true
 
+publish:
+  quarto-pub:
+    type: quarto-pub
+    site: test_blog
 
 

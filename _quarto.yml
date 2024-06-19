@@ -2,7 +2,6 @@ project:
   type: website
 
 website:
-  title: "."
   title: "Customer_Segmentation_Plots"
   navbar:
     left:

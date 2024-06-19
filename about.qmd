@@ -5,7 +5,6 @@ execute:
   echo: false
 ---
 
-About this site
 ```{r}
 #| message: false
 #| label: setup

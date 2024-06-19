@@ -17,7 +17,7 @@ library(tidycensus)
 #| warning: false
 #| message: false
 
-plot2 <-  read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Final-Project-test/data/Mall_Customers.csv") |>
+plot2 <-  read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
   drop_na() |>
   ggplot(aes(x = `Annual Income (k$)`, y = `Spending Score (1-100)`)) +
   geom_point(color = "blue",

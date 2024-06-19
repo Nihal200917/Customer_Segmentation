@@ -18,7 +18,7 @@ library(tidycensus)
 #| message: false
 #| warning: false
 
-plot1 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Final-Project-test/data/Mall_Customers.csv") |>
+plot1 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
   drop_na() |>
   ggplot(aes(x = Gender, y = Age, fill = Gender)) +
   geom_boxplot(width = 0.1) +

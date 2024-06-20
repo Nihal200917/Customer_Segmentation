@@ -43,3 +43,37 @@ plot1 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Seg
 
 print(plot1)
 ```
+
+
+```{r}
+#| message: false
+#| warning: false
+
+plot2 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
+  drop_na() |>
+  ggplot(aes(x = `Annual Income (k$)`, fill = Gender)) +
+  geom_histogram() +
+  theme_minimal() +
+  labs(
+    title = "Distribution of Annual Income by Gender", 
+    x = "Annual Income",
+    y = " ",
+    caption = "Source: Mall Customers Dataset"
+  ) +
+  scale_x_continuous(
+    limits = c(0, 160),
+    breaks = seq(0, 160, by = 20)
+  ) +
+  theme(
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 12),
+    legend.position = "top",
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 12)
+  )
+
+print(plot2)
+```
+

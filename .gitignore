@@ -10,3 +10,6 @@ Mall_Customers.csv
 /.quarto/
 
 _site/
+
+
+rsconnect/

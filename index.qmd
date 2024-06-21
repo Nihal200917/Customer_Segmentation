@@ -5,10 +5,14 @@ execute:
 ---
 Analyzing information of Mall Customers to provide insights to Brands and other companies on Improving their marketing efficiency and increasing profitability.
 
+
 ## Introduction
 Customer segmentation is a key marketing strategy that involves dividing a company's customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).
 
 By identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability.
+
+
+# Analyzing Info on 
 ```{r}
 #| message: false
 #| label: setup

@@ -1,1 +1,1 @@
-Sitemap: https://nihal200917.quarto.pub/customer-segmentation-plots/sitemap.xml
+Sitemap: https://Nihal200917.github.io/Customer_Segmentation/sitemap.xml

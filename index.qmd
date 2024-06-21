@@ -1,17 +1,21 @@
 ---
-title: "Customer Segmentation"
-author: "Nihal Neeraj"
+title: "Mall Customer Segmentation"
 execute: 
   echo: false
 ---
+Analyzing information of Mall Customers to provide insights to Brands and other companies on Improving their marketing efficiency and increasing profitability.
 
+## Introduction
+Customer segmentation is a key marketing strategy that involves dividing a company's customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).
 
+By identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability.
 ```{r}
 #| message: false
 #| label: setup
 
 library(tidyverse)
-library(tidycensus)
+library(scales)
+library(plotly)
 ```
 
 ```{r}
@@ -21,9 +25,9 @@ library(tidycensus)
 plot1 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
   drop_na() |>
   ggplot(aes(x = Gender, y = Age, fill = Gender)) +
-  geom_boxplot(width = 0.1) +
+  geom_boxplot(width = 3) +
   geom_violin(alpha = 0.5,
-              width = 0.4) +
+              width = 0.1) +
   scale_y_continuous(limits = c(10, 70), 
                      breaks = seq(10, 70, by = 10)) +
   theme_minimal() +
@@ -40,40 +44,33 @@ plot1 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Seg
     legend.title = element_text(size = 12),
     legend.text = element_text(size = 10))
 
+interactive_plot <- ggplotly(plot1)
 
-print(plot1)
+interactive_plot
 ```
 
 
 ```{r}
-#| message: false
 #| warning: false
 
-plot2 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
-  drop_na() |>
-  ggplot(aes(x = `Annual Income (k$)`, fill = Gender)) +
-  geom_histogram() +
+x <- read_csv(file = "Mall_Customers.csv", show_col_types = FALSE)
+
+# Create a histogram
+plot <- x |>
+  ggplot(aes(x = Age, fill = Gender, color = Gender)) +
+  geom_histogram(alpha = 0.5) +
   theme_minimal() +
   labs(
-    title = "Distribution of Annual Income by Gender", 
-    x = "Annual Income",
-    y = " ",
-    caption = "Source: Mall Customers Dataset"
-  ) +
-  scale_x_continuous(
-    limits = c(0, 160),
-    breaks = seq(0, 160, by = 20)
-  ) +
-  theme(
-    axis.title = element_text(size = 12),
-    axis.text = element_text(size = 10),
-    legend.text = element_text(size = 10),
-    legend.title = element_text(size = 12),
-    legend.position = "top",
-    plot.title = element_text(size = 16, face = "bold"),
-    plot.subtitle = element_text(size = 12)
+    title = "Age Distribution by Gender",
+    x = "Age",
+    y = "Count",
+    fill = "Gender",
+    color = "Gender"
   )
 
-print(plot2)
+# Convert to an interactive plot
+interactive_plot <- ggplotly(plot)
+
+interactive_plot
 ```
 

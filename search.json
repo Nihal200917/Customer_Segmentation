@@ -1,16 +1,44 @@
 [
   {
+    "objectID": "Visual Analysis.html",
+    "href": "Visual Analysis.html",
+    "title": "Visual Analysis",
+    "section": "",
+    "text": "Rows: 200 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): Gender\ndbl (4): CustomerID, Age, Annual Income (k$), Spending Score (1-100)\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRows: 200 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): Gender\ndbl (4): CustomerID, Age, Annual Income (k$), Spending Score (1-100)\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nThe visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hi my name is Nihal Neeraj. I am a rising 9th grader who enjoys Art and sports like Soccer. I am willing to learn and explore more on Data Science.\nYou can reach me at my email: (nihalneeraj2009@gmail.com)"
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
+    "section": "",
+    "text": "Hi my name is Nihal Neeraj. I am a rising 9th grader who enjoys Art and sports like Soccer. I am willing to learn and explore more on Data Science.\nYou can reach me at my email: (nihalneeraj2009@gmail.com)"
+  },
+  {
+    "objectID": "about.html#about-this-project",
+    "href": "about.html#about-this-project",
+    "title": "About",
+    "section": "About this Project",
+    "text": "About this Project\nThis project was created as part of Kane’s Free Data Science Bootcamp."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Mall Customer Segmentation",
     "section": "",
-    "text": "Analyzing information of Mall Customers to provide insights to Brands and other companies on Improving their marketing efficiency and increasing profitability."
+    "text": "Customer segmentation is a key marketing strategy that involves dividing a company’s customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).\nBy identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability."
   },
   {
     "objectID": "index.html#introduction",
     "href": "index.html#introduction",
     "title": "Mall Customer Segmentation",
-    "section": "Introduction",
-    "text": "Introduction\nCustomer segmentation is a key marketing strategy that involves dividing a company’s customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).\nBy identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability."
+    "section": "",
+    "text": "Customer segmentation is a key marketing strategy that involves dividing a company’s customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).\nBy identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability."
   }
 ]

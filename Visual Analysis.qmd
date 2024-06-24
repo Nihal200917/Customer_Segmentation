@@ -134,7 +134,7 @@ plot6 <- data |>
              color = 'blue', 
              size = 1) +
   scale_y_continuous(limits = c(20, 100),
-                     breaks = seq(20, 100, by = 20)) +
+                     breaks = seq(20, 100, by = 5)) +
   labs(
     title = "Spending Scores by Age Group",
     subtitle = "High, Medium, and Low Spenders",

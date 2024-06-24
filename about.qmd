@@ -1,83 +1,13 @@
 ---
-title: "Visual Analysis"
-execute: 
-  echo: false
+title: "About"
 ---
 
-```{r}
-#| message: false
-#| label: setup
+## About Me
 
-library(tidyverse)
-library(scales)
-library(plotly)
-```
+Hi my name is [Nihal Neeraj](https://github.com/Nihal200917). I am a rising 9th grader who enjoys Art and sports like Soccer. I am willing to learn and explore more on Data Science.
 
+You can reach me at my email: (nihalneeraj2009@gmail.com)
 
-```{r}
-#| warning: false
-#| message: false
+## About this Project
 
-plot3 <-  read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
-  drop_na() |>
-  ggplot(aes(x = `Annual Income (k$)`, y = `Spending Score (1-100)`)) +
-  geom_point(color = "blue",
-             size = 3, 
-             alpha = 0.6) + 
-  geom_smooth(method = "lm", 
-              color = "red", 
-              linetype = "dashed",
-              formula = y ~ x,) +
-  scale_x_continuous(
-  limits = c(20, 140),
-  breaks = seq(20, 140, by = 20)
-  ) +
-  labs(title = "Relationship between Annual Income \n and Spending Score",
-       x = "Annual Income (k$)",
-       y = "Spending Score (1-100)",
-       caption = "Data Source: Mall_Customers.csv") +
-  theme_minimal(base_size = 15) +
-  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
-        axis.title = element_text(face = "bold"),
-        panel.grid.major = element_line(color = "gray", size = 0.5),
-        panel.grid.minor = element_line(color = "lightgray", size = 0.25))
-interactive_plot <- ggplotly(plot3)
-interactive_plot
-```
-
-
-```{r}
-#| message: false
-#| warning: false
-
-plot2 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
-  drop_na() |>
-  ggplot(aes(x = `Annual Income (k$)`, color = Gender, fill = Gender)) +
-  geom_histogram(alpha = 0.5) +
-  theme_minimal() +
-  labs(
-    title = "Distribution of Annual Income by Gender", 
-    x = "Annual Income",
-    y = " ",
-    caption = "Source: Mall Customers Dataset"
-  ) +
-  scale_x_continuous(
-    limits = c(0, 160),
-    breaks = seq(0, 160, by = 20)
-  ) +
-  theme(
-    axis.title = element_text(size = 12),
-    axis.text = element_text(size = 10),
-    legend.text = element_text(size = 10),
-    legend.title = element_text(size = 12),
-    legend.position = "top",
-    plot.title = element_text(size = 16, face = "bold"),
-    plot.subtitle = element_text(size = 12)
-  )
-
-interactive_plot <- ggplotly(plot2)
-
-interactive_plot
-```
-
-
+This project was created as part of [Kane's Free Data Science Bootcamp](https://bootcamp.davidkane.info/schedule.html).

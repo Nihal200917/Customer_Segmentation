@@ -1,0 +1,22 @@
+---
+title: "Source"
+execute: 
+  echo: false
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(tidycensus)
+library(scales)
+library(plotly)
+```
+
+## Dataset
+```{r}
+#| message: false
+x <- read_csv(file = "Mall_Customers.csv")
+print(x)
+```
+### Table Logistics
+The "Gender" column reveals the observed proportions of the gender of mall customers. This information was used to provide comparison of the genders of mall customers which is used to provide information to companies on which products could be sold for maximum profit.

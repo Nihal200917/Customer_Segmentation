@@ -3,19 +3,14 @@ title: "Mall Customer Segmentation"
 execute: 
   echo: false
 ---
-Analyzing information of Mall Customers to provide insights to Brands and other companies on Improving their marketing efficiency and increasing profitability.
-
 
 ## Introduction
-Customer segmentation is a key marketing strategy that involves dividing a company's customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).
-
-By identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability.
+Customer segmentation is a key marketing strategy that involves dividing a company's customer base into distinct groups of individuals that share similar characteristics. This was sourced from a dataset that had basic original mall customer information. The data was filtered and selected to show the relationship between age, gender, Income, and spending score which would possibly become useful for businesses to make the market more effective. The visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies.
 
 
-# Data Models
+## Data Models
 
-The below plot shows the data on Mall Customers and their ages. 
-With this data, businesses can find out what kind products to sell for the age group that most 6 visits the Mall.
+The plots below analyze mall customer information, offering insights for brands and companies to enhance marketing efficiency and boost profitability. By understanding customer behavior and preferences, businesses can tailor their strategies, optimize their campaigns, and achieve better results, ultimately leading to increased revenue and customer satisfaction.
 
 ```{r}
 #| message: false
@@ -26,13 +21,16 @@ library(scales)
 library(plotly)
 ```
 
+This graph identifies the predominant age groups of frequent mall customers, offering valuable insights for businesses and marketing firms to refine their audience targeting strategies.
 ```{r}
 #| message: false
 #| warning: false
 
 plot1 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Segmentation/Mall_Customers.csv") |>
   drop_na() |>
-  ggplot(aes(x = Gender, y = Age, fill = Gender)) +
+  ggplot(aes(x = Gender,
+             y = Age, 
+             fill = Gender)) +
   geom_boxplot(width = 3) +
   geom_violin(alpha = 0.5,
               width = 0.1) +
@@ -44,7 +42,9 @@ plot1 <- read_csv("/Users/neera/OneDrive/Documents/Desktop/projects/Customer_Seg
        x = "Gender",
        y = "Age",
        caption = "Source: Mall Customers Dataset") +
-  theme(plot.title = element_text(size = 16, face = "bold"),
+  theme(
+    plot.title = element_text(size = 16,
+                              face = "bold"),
     plot.subtitle = element_text(size = 12),
     axis.title = element_text(size = 12),
     axis.text = element_text(size = 10),
@@ -57,15 +57,17 @@ interactive_plot <- ggplotly(plot1)
 interactive_plot
 ```
 
-
+This histogram presents the same data as the previous graph but offers a clearer view of the number of frequent age groups.
 ```{r}
 #| warning: false
 
-x <- read_csv(file = "Mall_Customers.csv", show_col_types = FALSE)
-
-# Create a histogram
+x <- read_csv(file = "Mall_Customers.csv", 
+              show_col_types = FALSE) |>
+     drop_na()
 plot <- x |>
-  ggplot(aes(x = Age, fill = Gender, color = Gender)) +
+  ggplot(aes(x = Age,
+             fill = Gender, 
+             color = Gender)) +
   geom_histogram(alpha = 0.5) +
   theme_minimal() +
   labs(

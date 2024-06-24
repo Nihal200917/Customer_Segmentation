@@ -4,7 +4,49 @@
     "href": "Visual Analysis.html",
     "title": "Visual Analysis",
     "section": "",
-    "text": "Rows: 200 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): Gender\ndbl (4): CustomerID, Age, Annual Income (k$), Spending Score (1-100)\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRows: 200 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): Gender\ndbl (4): CustomerID, Age, Annual Income (k$), Spending Score (1-100)\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nThe visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies."
+    "text": "How can we segment mall customers based on their purchasing behaviour, gender, age, and annual income to make brands and companies target customers more efficiently"
+  },
+  {
+    "objectID": "Visual Analysis.html#central-question",
+    "href": "Visual Analysis.html#central-question",
+    "title": "Visual Analysis",
+    "section": "",
+    "text": "How can we segment mall customers based on their purchasing behaviour, gender, age, and annual income to make brands and companies target customers more efficiently"
+  },
+  {
+    "objectID": "Visual Analysis.html#visual-representation",
+    "href": "Visual Analysis.html#visual-representation",
+    "title": "Visual Analysis",
+    "section": "Visual Representation",
+    "text": "Visual Representation"
+  },
+  {
+    "objectID": "Visual Analysis.html#conclusion",
+    "href": "Visual Analysis.html#conclusion",
+    "title": "Visual Analysis",
+    "section": "Conclusion",
+    "text": "Conclusion\nThese visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mall Customer Segmentation",
+    "section": "",
+    "text": "Customer segmentation is a key marketing strategy that involves dividing a company’s customer base into distinct groups of individuals that share similar characteristics. This was sourced from a dataset that had basic original mall customer information. The data was filtered and selected to show the relationship between age, gender, Income, and spending score which would possibly become useful for businesses to make the market more effective. The visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Mall Customer Segmentation",
+    "section": "",
+    "text": "Customer segmentation is a key marketing strategy that involves dividing a company’s customer base into distinct groups of individuals that share similar characteristics. This was sourced from a dataset that had basic original mall customer information. The data was filtered and selected to show the relationship between age, gender, Income, and spending score which would possibly become useful for businesses to make the market more effective. The visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies."
+  },
+  {
+    "objectID": "index.html#data-models",
+    "href": "index.html#data-models",
+    "title": "Mall Customer Segmentation",
+    "section": "Data Models",
+    "text": "Data Models\nThe plots below analyze mall customer information, offering insights for brands and companies to enhance marketing efficiency and boost profitability. By understanding customer behavior and preferences, businesses can tailor their strategies, optimize their campaigns, and achieve better results, ultimately leading to increased revenue and customer satisfaction.\nThis graph identifies the predominant age groups of frequent mall customers, offering valuable insights for businesses and marketing firms to refine their audience targeting strategies.\n\n\n\n\n\n\nThis histogram presents the same data as the previous graph but offers a clearer view of the number of frequent age groups."
   },
   {
     "objectID": "about.html",
@@ -28,17 +70,17 @@
     "text": "About this Project\nThis project was created as part of Kane’s Free Data Science Bootcamp."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Mall Customer Segmentation",
+    "objectID": "source.html",
+    "href": "source.html",
+    "title": "Source",
     "section": "",
-    "text": "Customer segmentation is a key marketing strategy that involves dividing a company’s customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).\nBy identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability."
+    "text": "# A tibble: 200 × 5\n   CustomerID Gender   Age `Annual Income (k$)` `Spending Score (1-100)`\n        &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;                &lt;dbl&gt;                    &lt;dbl&gt;\n 1          1 Male      19                   15                       39\n 2          2 Male      21                   15                       81\n 3          3 Female    20                   16                        6\n 4          4 Female    23                   16                       77\n 5          5 Female    31                   17                       40\n 6          6 Female    22                   17                       76\n 7          7 Female    35                   18                        6\n 8          8 Female    23                   18                       94\n 9          9 Male      64                   19                        3\n10         10 Female    30                   19                       72\n# ℹ 190 more rows\n\n\n\n\nThe “Gender” column reveals the observed proportions of the gender of mall customers. This information was used to provide comparison of the genders of mall customers which is used to provide information to companies on which products could be sold for maximum profit."
   },
   {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "Mall Customer Segmentation",
+    "objectID": "source.html#dataset",
+    "href": "source.html#dataset",
+    "title": "Source",
     "section": "",
-    "text": "Customer segmentation is a key marketing strategy that involves dividing a company’s customer base into distinct groups of individuals that share similar characteristics. These characteristics can include demographic factors (age, gender, income), behavioral patterns (purchase history, brand loyalty), psychographics (lifestyle, values), and geographic information (location).\nBy identifying these segments, businesses can tailor their marketing efforts, product development, and customer service to better meet the specific needs and preferences of each group. This targeted approach helps in improving customer satisfaction, enhancing marketing effectiveness, and increasing overall profitability."
+    "text": "# A tibble: 200 × 5\n   CustomerID Gender   Age `Annual Income (k$)` `Spending Score (1-100)`\n        &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;                &lt;dbl&gt;                    &lt;dbl&gt;\n 1          1 Male      19                   15                       39\n 2          2 Male      21                   15                       81\n 3          3 Female    20                   16                        6\n 4          4 Female    23                   16                       77\n 5          5 Female    31                   17                       40\n 6          6 Female    22                   17                       76\n 7          7 Female    35                   18                        6\n 8          8 Female    23                   18                       94\n 9          9 Male      64                   19                        3\n10         10 Female    30                   19                       72\n# ℹ 190 more rows\n\n\n\n\nThe “Gender” column reveals the observed proportions of the gender of mall customers. This information was used to provide comparison of the genders of mall customers which is used to provide information to companies on which products could be sold for maximum profit."
   }
 ]

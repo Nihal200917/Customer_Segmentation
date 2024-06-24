@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Customer Segmentation - About</title>
+<title>Customer Segmentation - Source</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,11 +97,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Visual Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./source.html"> 
+    <a class="nav-link active" href="./source.html" aria-current="page"> 
 <span class="menu-text">Source</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -120,8 +120,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me">About Me</a></li>
-  <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link" data-scroll-target="#about-this-project">About this Project</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a>
+  <ul class="collapse">
+  <li><a href="#table-logistics" id="toc-table-logistics" class="nav-link" data-scroll-target="#table-logistics">Table Logistics</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -130,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Source</h1>
 </div>
 
 
@@ -147,16 +149,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-me" class="level2">
-<h2 class="anchored" data-anchor-id="about-me">About Me</h2>
-<p>Hi my name is <a href="https://github.com/Nihal200917">Nihal Neeraj</a>. I am a rising 9th grader who enjoys Art and sports like Soccer. I am willing to learn and explore more on Data Science.</p>
-<p>You can reach me at my email: (nihalneeraj2009@gmail.com)</p>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 200 × 5
+   CustomerID Gender   Age `Annual Income (k$)` `Spending Score (1-100)`
+        &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;                &lt;dbl&gt;                    &lt;dbl&gt;
+ 1          1 Male      19                   15                       39
+ 2          2 Male      21                   15                       81
+ 3          3 Female    20                   16                        6
+ 4          4 Female    23                   16                       77
+ 5          5 Female    31                   17                       40
+ 6          6 Female    22                   17                       76
+ 7          7 Female    35                   18                        6
+ 8          8 Female    23                   18                       94
+ 9          9 Male      64                   19                        3
+10         10 Female    30                   19                       72
+# ℹ 190 more rows</code></pre>
+</div>
+</div>
+<section id="table-logistics" class="level3">
+<h3 class="anchored" data-anchor-id="table-logistics">Table Logistics</h3>
+<p>The “Gender” column reveals the observed proportions of the gender of mall customers. This information was used to provide comparison of the genders of mall customers which is used to provide information to companies on which products could be sold for maximum profit.</p>
+
+
 </section>
-<section id="about-this-project" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-project">About this Project</h2>
-<p>This project was created as part of <a href="https://bootcamp.davidkane.info/schedule.html">Kane’s Free Data Science Bootcamp</a>.</p>
-
-
 </section>
 
 </main> <!-- /main -->

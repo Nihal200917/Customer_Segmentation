@@ -5,8 +5,7 @@ execute:
 ---
 
 ## Introduction
-Customer segmentation is a key marketing strategy that involves dividing a company's customer base into distinct groups of individuals that share similar characteristics. This was sourced from a dataset that had basic original mall customer information. The data was filtered and selected to show the relationship between age, gender, Income, and spending score which would possibly become useful for businesses to make the market more effective. The visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies.
-
+Customer segmentation is a key marketing strategy that divides a customer base into distinct groups with similar characteristics. Using mall customer data, this analysis reveals relationships between age, gender, income, and spending score. The visualizations show that age groups between 18 to 40 have the highest spending scores which reveal that these age groups are most commmon spenders in malls.
 
 ## Data Models
 
@@ -60,26 +59,38 @@ interactive_plot
 This histogram presents the same data as the previous graph but offers a clearer view of the number of frequent age groups.
 ```{r}
 #| warning: false
+#| message: false
 
-x <- read_csv(file = "Mall_Customers.csv", 
-              show_col_types = FALSE) |>
-     drop_na()
-plot <- x |>
-  ggplot(aes(x = Age,
-             fill = Gender, 
-             color = Gender)) +
-  geom_histogram(alpha = 0.5) +
-  theme_minimal() +
+plot5 <- read_csv("Mall_Customers.csv") |>
+  drop_na() |>
+  select(`Spending Score (1-100)`,
+         Age)
+
+plot <- ggplot(plot5, aes(x = Age, 
+                          y = `Spending Score (1-100)`)) +
+  geom_point(color = 'blue',
+             alpha = 0.6) +
+  geom_density2d(color = 'red') +
+  geom_smooth(method = 'loess',
+              se = FALSE, 
+              color = 'green') +
+  scale_y_continuous(limits = c(0, 100), 
+                     breaks = seq(0, 100, by = 20)) +
   labs(
-    title = "Age Distribution by Gender",
+    title = "Age vs. Spending Score",
+    subtitle = "Analyzing the spending behavior across different age groups",
     x = "Age",
-    y = "Count",
-    fill = "Gender",
-    color = "Gender"
+    y = "Spending Score (1-100)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 14),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
   )
 
-# Convert to an interactive plot
-interactive_plot <- ggplotly(plot)
+interactive_plot <- ggplotly(plot, tooltip = c("x", "y"))
 
 interactive_plot
 ```

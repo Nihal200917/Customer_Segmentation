@@ -6,9 +6,10 @@ execute:
 
 ## Central Question
 How can we segment mall customers based on their purchasing behaviour, gender, age, and annual income to make brands and companies target customers more efficiently  
+\n
+\n
 
-
-## Visual Representation
+# Visual Representation
 ```{r}
 #| message: false
 #| label: setup
@@ -17,6 +18,7 @@ library(tidyverse)
 library(scales)
 library(plotly)
 ```
+
 
 ```{r}
 #| message: false
@@ -70,44 +72,8 @@ interactive_plot <- ggplotly(plot3)
 interactive_plot
 ```
 
-```{r}
-#| warning: false
-#| message: false
-
-plot5 <- read_csv("Mall_Customers.csv") |>
-  drop_na() |>
-  select(`Spending Score (1-100)`,
-         Age)
-
-plot <- ggplot(plot5, aes(x = Age, 
-                          y = `Spending Score (1-100)`)) +
-  geom_point(color = 'blue',
-             alpha = 0.6) +
-  geom_density2d(color = 'red') +
-  geom_smooth(method = 'loess',
-              se = FALSE, 
-              color = 'green') +
-  scale_y_continuous(limits = c(0, 100), 
-                     breaks = seq(0, 100, by = 20)) +
-  labs(
-    title = "Age vs. Spending Score",
-    subtitle = "Analyzing the spending behavior across different age groups",
-    x = "Age",
-    y = "Spending Score (1-100)"
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(size = 16, face = "bold"),
-    plot.subtitle = element_text(size = 14),
-    axis.title = element_text(size = 12),
-    axis.text = element_text(size = 10)
-  )
-
-interactive_plot <- ggplotly(plot, tooltip = c("x", "y"))
-
-interactive_plot
-```
-
+### Different types of Spenders
+The below graph represents the different types of spenders and their spending scores.
 ```{r}
 #| warning: false
 #| message: false
@@ -125,14 +91,17 @@ data <- read_csv("Mall_Customers.csv") |>
 plot6 <- data |>
   ggplot() +
   geom_point(aes(x = Age, y = High_Spenders),
-             color = 'red',
-             size = 1) +
-  geom_point(aes(x = Age, y = Low_Spenders),
-             color = 'green', 
-             size = 1) +
+             color = '#440154FF',
+             size = 1,
+             alpha = 0.8) +
   geom_point(aes(x = Age, y = Medium_Spenders), 
-             color = 'blue', 
-             size = 1) +
+             color = '#FDE725FF', 
+             size = 1,
+             alpha = 0.8) +
+  geom_point(aes(x = Age, y = Low_Spenders),
+             color = '#21908CFF', 
+             size = 1,
+             alpha = 0.8) +
   scale_y_continuous(limits = c(20, 100),
                      breaks = seq(20, 100, by = 5)) +
   labs(
@@ -155,7 +124,15 @@ interactive_plot <- ggplotly(plot6, tooltip = c("x", "y"))
 
 interactive_plot
 ```
+Graph Logistics - 
 
+ * The graph visually represents the corellation between spending scores and age, this allows marketing brands to produce products that would drag attention to the minds of these mall customers that fall into specific age groups
+
+ * The purple colored points represent High spenders who have their spending scores above 80
+
+ * The bright yellow points represents Medium spenders who have spending score between 80 and 40
+
+ * The teel colored points represents Low spenders who have spending score below 40
 
 ## Conclusion
 These visualizations reveal distinct patterns in age, income, spending behavior, and gender distribution, providing valuable insights for customer segmentation and targeted marketing strategies.

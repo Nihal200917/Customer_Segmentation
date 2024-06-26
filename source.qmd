@@ -3,7 +3,6 @@ title: "Source"
 execute: 
   echo: false
 ---
-# Need to provide link
 ```{r}
 #| message: false
 library(tidyverse)
@@ -18,6 +17,11 @@ library(plotly)
 x <- read_csv(file = "Mall_Customers.csv")
 print(x)
 ```
+### Link to my dataset
+
+The link to my dataset:
+[https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python?resource=download](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python?resource=download)
+
 ### Table Logistics
 
  * Age

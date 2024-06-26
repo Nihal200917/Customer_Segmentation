@@ -5,11 +5,11 @@ execute:
 ---
 
 ## Introduction
-Customer segmentation is a key marketing strategy that divides a customer base into distinct groups with similar characteristics. Using mall customer data, this analysis reveals relationships between age, gender, income, and spending score. The visualizations show that age groups between 18 to 40 have the highest spending scores which reveal that these age groups are most commmon spenders in malls.
+Customer segmentation is a key marketing strategy that divides a customer base into distinct groups with similar characteristics. Using mall customer data, this analysis reveals relationships between age, gender, income, and spending score. The visualizations show that age groups that have the highest spending scores and what gender has the most highest spending score, this would reveal that these age groups and genders are the most commmon spenders in malls.
 
-## Data Models
+## Data Model
 
-The plots below analyze mall customer information, offering insights for brands and companies to enhance marketing efficiency and boost profitability. By understanding customer behavior and preferences, businesses can tailor their strategies, optimize their campaigns, and achieve better results, ultimately leading to increased revenue and customer satisfaction.
+The plot below analyzes mall customer information, offering insights for brands and companies to enhance marketing efficiency and boost profitability. By understanding customer behavior and preferences, businesses can tailor their strategies, optimize their campaigns, and achieve better results, ultimately leading to increased revenue and customer satisfaction.
 
 ```{r}
 #| message: false
@@ -19,8 +19,8 @@ library(tidyverse)
 library(scales)
 library(plotly)
 ```
-
-This graph identifies the predominant age groups of frequent mall customers, offering valuable insights for businesses and marketing firms to refine their audience targeting strategies.
+### Age Distributions
+The plot allows you to compare the age distributions between male and female customers. For example, you might observe that one gender has a wider age range or a higher concentration of customers within a specific age group.
 ```{r}
 #| message: false
 #| warning: false
@@ -55,43 +55,9 @@ interactive_plot <- ggplotly(plot1)
 
 interactive_plot
 ```
+Graphic Logistics - 
 
-This histogram presents the same data as the previous graph but offers a clearer view of the number of frequent age groups.
-```{r}
-#| warning: false
-#| message: false
-
-plot5 <- read_csv("Mall_Customers.csv") |>
-  drop_na() |>
-  select(`Spending Score (1-100)`,
-         Age)
-
-plot <- ggplot(plot5, aes(x = Age, 
-                          y = `Spending Score (1-100)`)) +
-  geom_point(color = 'blue',
-             alpha = 0.6) +
-  geom_density2d(color = 'red') +
-  geom_smooth(method = 'loess',
-              se = FALSE, 
-              color = 'green') +
-  scale_y_continuous(limits = c(0, 100), 
-                     breaks = seq(0, 100, by = 20)) +
-  labs(
-    title = "Age vs. Spending Score",
-    subtitle = "Analyzing the spending behavior across different age groups",
-    x = "Age",
-    y = "Spending Score (1-100)"
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(size = 16, face = "bold"),
-    plot.subtitle = element_text(size = 14),
-    axis.title = element_text(size = 12),
-    axis.text = element_text(size = 10)
-  )
-
-interactive_plot <- ggplotly(plot, tooltip = c("x", "y"))
-
-interactive_plot
-```
+ * The boxplot provides a summary of the age distribution within each gender group, showing the median, quartiles, and     potential outliers.
+ 
+ * The violin plot adds information about the density of the data at different age levels. Wider sections of the violin    plot indicate higher density (more customers) at those age levels.
 
